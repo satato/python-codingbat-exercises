@@ -1,0 +1,9 @@
+def array123(nums):
+  length = len(nums)-2
+  isThere = False
+  
+  for i in range(0, length):
+    if (nums[i] == 1) and (nums[i+1] == 2) and (nums[i+2] == 3):
+      isThere = True
+      
+  return isThere

@@ -1,0 +1,3 @@
+def left2(str):
+  start = str[0:2]
+  return str[2:]+start

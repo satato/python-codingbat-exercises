@@ -1,0 +1,15 @@
+def string_match(a, b):
+  c = a
+  d = b
+  if (len(a) > len(b)):
+    c = b
+    d = a
+
+  count = 0
+  for i in range(0, len(c)-1):
+    if c[:2] == d[:2]:
+      count += 1
+    c = c[1:]
+    d = d[1:]
+      
+  return count

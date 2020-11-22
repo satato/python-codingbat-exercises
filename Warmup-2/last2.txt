@@ -1,0 +1,21 @@
+def last2(str):
+  if len(str) <= 2:
+    return 0;
+  else:
+    substring = str[-2:]
+    str = str[:len(str)-1]
+    count = 0
+    index = 0
+    
+    if not(substring in str):
+      return 0
+    
+    isIn = True
+    while (isIn):
+      count += 1
+      index = str.find(substring)
+      str = str[:index+1] + str[index+2:]
+      if not(substring in str):
+        isIn = False
+      
+    return count

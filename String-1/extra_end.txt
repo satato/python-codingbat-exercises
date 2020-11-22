@@ -1,0 +1,5 @@
+def extra_end(str):
+  newStr = ""
+  for i in range(0,3):
+    newStr += str[-2:]
+  return newStr
