@@ -1,0 +1,7 @@
+def has22(nums):
+  answer = False
+  if 2 in nums:
+    for i in range(0, len(nums)-1):
+      if nums[i] == 2 and nums[i+1] == 2:
+        answer = True
+  return answer

@@ -1,0 +1,32 @@
+def count6(nums):
+  count = 0
+  for i in nums:
+    if i == 6:
+      count += 1
+  return count
+
+def sum67(nums):
+  sum = 0
+  sixIndex = 0
+  sevenIndex = 0
+  lastIndex = 0
+  isSixPresent = False
+
+  if 6 in nums:
+    isSixPresent = True
+    while isSixPresent:
+        sixIndex = nums.index(6, sevenIndex)
+        sevenIndex = nums.index(7, sixIndex)
+        for i in range(lastIndex, sixIndex):
+            sum += nums[i]
+        lastIndex = sevenIndex+1
+        if not(6 in nums[sevenIndex:]):
+            isSixPresent = False
+    for i in range(lastIndex, len(nums)):
+        sum += nums[i]
+    return sum
+    
+  else:
+    for i in nums:
+      sum += i
+    return sum

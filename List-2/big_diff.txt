@@ -1,0 +1,11 @@
+def big_diff(nums):
+  largest = nums[0]
+  smallest = nums[0]
+  
+  if len(nums) == 1:
+    return 0
+  else:
+    for i in nums:
+      smallest = min(i, smallest)
+      largest = max (i, largest)
+    return largest - smallest

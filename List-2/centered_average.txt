@@ -1,0 +1,20 @@
+def centered_average(nums):
+  smallest = nums[0]
+  largest = nums[0]
+  add = 0
+
+  for i in nums:
+    smallest = min(smallest, i)
+    largest = max(largest, i)
+
+  smallIndex = nums.index(smallest)
+  bigIndex = nums.index(largest)
+  
+  for i in range(0, len(nums)):
+    if not(i == bigIndex or i == smallIndex):
+      add += nums[i]
+  
+  if smallest == largest:
+    add -= largest
+  
+  return add/(len(nums)-2)
