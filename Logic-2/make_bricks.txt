@@ -1,0 +1,15 @@
+def make_bricks(small, big, goal):
+  if(big*5 == goal) or (small == goal):
+    return True
+  elif (big*5 < goal):
+    goal = goal - (big*5)
+    if small < goal:
+      return False
+    else:
+      return True
+  else:
+    working = goal % 5
+    if small >= working:
+      return True
+    else:
+      return False
