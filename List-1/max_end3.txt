@@ -1,0 +1,11 @@
+def max_end3(nums):
+  larger = 0
+  if nums[0] > nums[-1]:
+    larger = nums[0]
+  else:
+    larger = nums[-1]
+    
+  for i in range(0, len(nums)):
+    nums[i] = larger
+    
+  return nums
