@@ -1,0 +1,15 @@
+def count_hi(str):
+  count = 0
+  index = 0
+  stillThere = True
+  
+  if("hi" in str):
+    while (stillThere):
+      index = str.find("hi")
+      count+=1
+      str = str[:index] + str[index+2:]
+      if not("hi" in str):
+        stillThere = False
+    return count
+  else:
+    return 0

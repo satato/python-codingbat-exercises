@@ -1,0 +1,13 @@
+def xyz_there(str):
+  index = 0
+  while True:
+    if "xyz" in str:
+      index = str.find("xyz")
+      if not(str[index-1] == '.'):
+        return True
+        break;
+      else:
+        str = str[:index-1] + str[index+3:]
+    else:
+      return False
+      break;

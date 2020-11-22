@@ -1,0 +1,5 @@
+def double_char(str):
+  newStr = ""
+  for i in str:
+    newStr += i+i
+  return newStr

@@ -1,0 +1,38 @@
+def countCat(str):
+  count = 0
+  index = 0
+  catIs = True
+  while catIs:
+    count+=1
+    index = str.find("cat")
+    str = str[:index]+str[index+3:]
+    if not("cat" in str):
+      catIs = False
+  return count
+  
+def countDog(str):
+  count = 0
+  index = 0
+  dogIs = True
+  while dogIs:
+    count+=1
+    index = str.find("dog")
+    str = str[:index]+str[index+3:]
+    if not("dog" in str):
+      dogIs = False
+  return count
+
+def cat_dog(str):
+  
+  catCount = 0
+  dogCount = 0
+  
+  if "cat" in str:
+    catCount = countCat(str)
+  if "dog" in str:
+    dogCount = countDog(str)
+    
+  if (catCount == dogCount):
+    return True
+  else:
+    return False
